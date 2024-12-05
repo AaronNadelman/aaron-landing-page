@@ -1,7 +1,7 @@
 import ButtonGradient from "./assets/svg/ButtonGradient";
 
 interface AppProps {
-  name?: "string";
+  name?: string;
 }
 
 const App: React.FC<AppProps> = ({ name }) => {
