@@ -1,13 +1,9 @@
 import ButtonGradient from "./assets/svg/ButtonGradient";
 
-interface AppProps {
-  name?: string;
-}
-
-const App: React.FC<AppProps> = ({ name }) => {
+const App: React.FC = () => {
   return (
     <div>
-      <h1>Hello, {name}!</h1>
+      <h1>Hello</h1>
       <ButtonGradient />
     </div>
   );
