@@ -1,4 +1,4 @@
-const ButtonGradient = () => {
+const ButtonGradient: React.FC = () => {
   return (
     <svg className="block" width={0} height={0}>
       <defs>
