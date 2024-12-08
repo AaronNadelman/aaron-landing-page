@@ -1,11 +1,12 @@
-import ButtonGradient from "./assets/svg/ButtonGradient";
+import NavTop from "./components/NavTop";
 
 const App: React.FC = () => {
   return (
-    <div>
-      <h1>Hello</h1>
-      <ButtonGradient />
-    </div>
+    <>
+      <header>
+        <NavTop />
+      </header>
+    </>
   );
 };
 
