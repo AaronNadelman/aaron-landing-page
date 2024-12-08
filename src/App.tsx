@@ -1,11 +1,17 @@
 import NavTop from "./components/NavTop";
+import ParticlesComponent from "./components/BackgroundParticles.tsx/ParticlesComponent";
+import Home from "./pages/Home";
 
 const App: React.FC = () => {
   return (
     <>
-      <header>
+      <div className="container relative z-0">
+        <ParticlesComponent />
+      </div>
+      <div className="relative z-100">
         <NavTop />
-      </header>
+        <Home />
+      </div>
     </>
   );
 };

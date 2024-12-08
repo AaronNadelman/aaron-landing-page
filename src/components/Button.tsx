@@ -12,6 +12,7 @@ const Button = () => {
       <label className="flex cursor-pointer bg-white rounded-xl select-none items-center">
         <div className="relative">
           <input
+            name="toggle"
             type="checkbox"
             checked={isChecked}
             onChange={handleCheckboxChange}
