@@ -16,8 +16,7 @@ function HomeHero() {
                 buen trabajo en equipo.{" "}
               </p>
 
-              <p className="mt-4 text-xl text-gray-600 md:mt-8">
-                <p className="py-5"></p>
+              <div className="mt-4 text-xl text-gray-600 md:mt-8">
                 <a
                   href="#"
                   title=""
@@ -25,7 +24,7 @@ function HomeHero() {
                 >
                   Descargar Resume
                 </a>
-              </p>
+              </div>
             </div>
 
             <div className="relative">
