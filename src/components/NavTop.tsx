@@ -1,43 +1,64 @@
-import Button from "./Button";
+import { Link } from "react-router-dom";
 import Toggle from "./Toggle";
 
 export default function NavTop() {
   return (
-    <header className="lg:mb-20 md:pb-15 sm:pb-0 shadow-lg font-normal max-h-20 position-">
-      <div className="flex items-center justify-between">
-        <Toggle />
-        <div className="flex items-center justify-center lg:h-20 md:h-16 sm:h-10">
-          <ul className="flex mx-10">
-            <li className="mx-5">
-              <Button
-                onClick={function (): {} {
-                  throw new Error("Function not implemented.");
-                }}
-                children={"Certificaciones"}
+    <div className="navbar shadow-lg font-body text-secondary">
+      <div className="navbar-start">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
               />
+            </svg>
+          </div>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content bg-secondary rounded-box z-[1] mt-3 w-52 p-2 shadow"
+          >
+            <li>
+              <Link to="/certificaciones">Certificaciones</Link>
             </li>
-            <li className="mx-5">
-              <Button
-                onClick={function (): {} {
-                  throw new Error("Function not implemented.");
-                }}
-                children={"Sobre mi"}
-              />
+            <li>
+              <Link to="/sobre-mi">Sobre mi</Link>
             </li>
-            <li className="mx-5">
-              <Button
-                onClick={function (): {} {
-                  throw new Error("Function not implemented.");
-                }}
-                children={"Contacto"}
-              />
+            <li>
+              <Link to="/contacto">Contacto</Link>
             </li>
           </ul>
         </div>
+        <Link to="/">
+          <img className="relative mx-5 sm:mx-2 h-12" src="/home.png" alt="" />
+        </Link>
+      </div>
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1 font-sans">
+          <li>
+            <Link to="/certificaciones">Certificaciones</Link>
+          </li>
+          <li>
+            <Link to="/sobre-mi">Sobre mi</Link>
+          </li>
+          <li>
+            <Link to="/contacto">Contacto</Link>
+          </li>
+        </ul>
+      </div>
+      <div className="navbar-end mx-5">
         <div className="mx-5">
-          <img src="" alt="" />
+          <Toggle />
         </div>
       </div>
-    </header>
+    </div>
   );
 }
