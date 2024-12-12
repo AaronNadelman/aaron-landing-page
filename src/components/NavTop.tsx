@@ -1,20 +1,42 @@
 import Button from "./Button";
+import Toggle from "./Toggle";
 
 export default function NavTop() {
   return (
-    <header className="lg:mb-20 md:pb-15 sm:pb-0 shadow-lg font-normal max-h-20">
-      <div className="flex items-center justify-between lg:h-20 md:h-16 sm:h-10">
-        <div className="mx-5">
-          <Button />
+    <header className="lg:mb-20 md:pb-15 sm:pb-0 shadow-lg font-normal max-h-20 position-">
+      <div className="flex items-center justify-between">
+        <Toggle />
+        <div className="flex items-center justify-center lg:h-20 md:h-16 sm:h-10">
+          <ul className="flex mx-10">
+            <li className="mx-5">
+              <Button
+                onClick={function (): {} {
+                  throw new Error("Function not implemented.");
+                }}
+                children={"Certificaciones"}
+              />
+            </li>
+            <li className="mx-5">
+              <Button
+                onClick={function (): {} {
+                  throw new Error("Function not implemented.");
+                }}
+                children={"Sobre mi"}
+              />
+            </li>
+            <li className="mx-5">
+              <Button
+                onClick={function (): {} {
+                  throw new Error("Function not implemented.");
+                }}
+                children={"Contacto"}
+              />
+            </li>
+          </ul>
         </div>
-        <h1>ADN - Soluciones</h1>
-
-        <ul className="flex mx-10">
-          <li className="mx-5">link1</li>
-          <li className="mx-5">link2</li>
-          <li className="mx-5">link2</li>
-          <li className="mx-5">link2</li>
-        </ul>
+        <div className="mx-5">
+          <img src="" alt="" />
+        </div>
       </div>
     </header>
   );

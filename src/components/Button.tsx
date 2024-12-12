@@ -1,36 +1,17 @@
-import { useState } from "react";
+interface buttonProps {
+  onClick: () => {};
+  children: string;
+}
 
-const Button = () => {
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-  };
-
+const Button = ({ children, onClick }: buttonProps) => {
   return (
-    <>
-      <label className="flex cursor-pointer bg-white rounded-xl select-none items-center">
-        <div className="relative">
-          <input
-            name="toggle"
-            type="checkbox"
-            checked={isChecked}
-            onChange={handleCheckboxChange}
-            className="sr-only"
-          />
-          <div
-            className={`box block h-8 w-14 rounded-full ${
-              isChecked ? "bg-primary" : "bg-dark"
-            }`}
-          ></div>
-          <div
-            className={`absolute left-1 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-black transition ${
-              isChecked ? "translate-x-full" : ""
-            }`}
-          ></div>
-        </div>
-      </label>
-    </>
+    <button
+      onClick={onClick}
+      className="border-dark dark:border-dark-2 border rounded-md inline-flex items-center justify-center py-3 px-7 text-center text-base font-medium text-white dark:text-white
+      hover:text-black   hover:bg-blue-200 hover:opacity-40 dark:hover:bg-dark-3 disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5"
+    >
+      <span>{children}</span>
+    </button>
   );
 };
 
