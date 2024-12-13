@@ -56,7 +56,7 @@ export default {
       {
         myDarkTheme: {
           primary: "#153595",
-          secondary: "#1c2478",
+          secondary: "#c183e2",
           accent: "#37cdbe",
           neutral: "#3d4451",
           color: "#000000",
