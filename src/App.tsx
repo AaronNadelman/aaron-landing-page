@@ -3,7 +3,7 @@ import ParticlesComponent from "./components/BackgroundParticles.tsx/ParticlesCo
 import Home from "./pages/Home";
 import Footer from "./components/footer/Footer";
 import { Route, Routes } from "react-router-dom";
-import { Certificaciones } from "./pages/Certificaciones";
+import Certificaciones from "./pages/certificaciones/Certificaciones";
 import SobreMi from "./pages/SobreMi";
 import Contacto from "./pages/Contacto";
 
